@@ -1,7 +1,9 @@
 
 from Bush import Bush;
 from Zone import Zone;
-import json;
+import json
+
+from server.Wall import Wall;
 
 class Map:
 
@@ -20,15 +22,27 @@ class Map:
 
 
   def createBushes(self):
-    bush1 = Bush(10,10, 40, 10);
+    bush1 = Bush(0,0, 40, 10);
     self.bushes.append(bush1);
-    bush2 = Bush(100,100,400,10)
+    bush2 = Bush(90,0,40,10)
     self.bushes.append(bush2);
+    bush3 = Bush(0,10, 20, 10);
+    self.bushes.append(bush3);
+    bush4 = Bush(120,10,10,10)
+    self.bushes.append(bush4);
+    bush5 = Bush(0,20, 30, 10);
+    self.bushes.append(bush5);
+    bush6 = Bush(0,20,30,10)
+    self.bushes.append(bush6);
+    bush7 = Bush(0,30, 10, 10);
+    self.bushes.append(bush7);
+    bush8 = Bush(220,10, 10, 10)
+    self.bushes.append(bush8);
 
   def createWalls(self):
-    bush1 = Bush(30,30, 40, 10);
+    bush1 = Wall(30,30, 40, 10);
     self.bushes.append(bush1);
-    bush2 = Bush(120,130,400,10)
+    bush2 = Wall(120,130,400,10)
     self.bushes.append(bush2);
 
   def createZone(self, x=None, y=None, radius=None):
